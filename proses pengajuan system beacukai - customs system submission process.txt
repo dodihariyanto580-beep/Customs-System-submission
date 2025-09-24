@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilingual Customs Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            color: #1a202c;
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .fade-in-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .flow-line {
+            position: relative;
+            height: 100%;
+            width: 4px;
+            background-color: #4a5568;
+            border-radius: 9999px;
+        }
+        .flow-point {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: #4299e1;
+            border: 4px solid #fff;
+            border-radius: 50%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .flow-step:last-child .flow-line {
+            height: 0;
+        }
+        .bilingual-pair {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        @media (min-width: 768px) {
+            .bilingual-pair {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Hero Section -->
+    <header class="bg-blue-900 text-white py-16 px-6 sm:px-12 md:px-24 rounded-b-[4rem] md:rounded-b-[8rem] overflow-hidden">
+        <div class="container mx-auto text-center animate-fade-in-on-scroll">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+                <span class="block">Customs System Application & Export-Import Flow</span>
+                <span class="block mt-2 text-xl md:text-3xl text-blue-200">海关系统申请与进出口流程</span>
+            </h1>
+            <p class="text-lg md:text-xl font-light mb-8 max-w-2xl mx-auto">
+                <span class="block">Step-by-step guide for companies to apply INSW, CEISA 4.0, and obtain tax facilities.</span>
+                <span class="block mt-1 text-base md:text-lg text-blue-200">企业申请 INSW、CEISA 4.0 及享受税收优惠的分步指南</span>
+            </p>
+            <a href="#application" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                <span class="mr-2">Start Your Application</span> | <span>开始申请</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="py-12 md:py-24">
+        <!-- Step-by-Step Flow Section -->
+        <section class="container mx-auto px-6 sm:px-12 md:px-24 mb-12" id="application">
+            <h2 class="text-2xl md:text-4xl font-semibold text-center mb-12 text-gray-800 fade-in-on-scroll">
+                <span class="block">Step-by-Step Flow</span>
+                <span class="block text-xl text-gray-500 mt-2">分步流程</span>
+            </h2>
+
+            <div class="relative max-w-3xl mx-auto">
+                <!-- Step 1 -->
+                <div class="flex items-start mb-16 fade-in-on-scroll">
+                    <div class="flex-shrink-0 relative mr-6 md:mr-12">
+                        <div class="flow-line absolute left-1/2 -top-4 bottom-0 transform -translate-x-1/2"></div>
+                        <div class="flow-point -top-4"></div>
+                        <div class="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg z-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.01 12.01 0 002.944 12c0 2.899 1.121 5.616 3.04 7.618A12.01 12.01 0 0012 21.056c2.899 0 5.616-1.121 7.618-3.04A12.01 12.01 0 0021.056 12a12.008 12.008 0 00-3.04-8.618z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                        <h3 class="text-xl font-semibold mb-2 text-blue-700">
+                            <span class="block">Step 1: Preparation Phase</span>
+                            <span class="block text-base font-normal text-gray-600 mt-1">步骤 1: 准备阶段</span>
+                        </h3>
+                        <ul class="list-disc list-inside space-y-2 mt-4 text-gray-700">
+                            <li><span class="font-medium">Apply for INSW Account</span> | <span class="text-gray-500">申请 INSW 账号</span></li>
+                            <li><span class="font-medium">Supporting Docs</span> | <span class="text-gray-500">支持文件:</span> NIB, NPU</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex items-start mb-16 fade-in-on-scroll">
+                    <div class="flex-shrink-0 relative mr-6 md:mr-12">
+                        <div class="flow-line absolute left-1/2 -top-4 bottom-0 transform -translate-x-1/2"></div>
+                        <div class="flow-point -top-4"></div>
+                        <div class="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg z-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                        <h3 class="text-xl font-semibold mb-2 text-blue-700">
+                            <span class="block">Step 2: CEISA 4.0 Account Application</span>
+                            <span class="block text-base font-normal text-gray-600 mt-1">步骤 2: 申请 CEISA 4.0 账号</span>
+                        </h3>
+                        <ul class="list-disc list-inside space-y-2 mt-4 text-gray-700">
+                            <li><span class="font-medium">Supporting Docs</span> | <span class="text-gray-500">支持文件:</span> NPU, Notarial Deed, NIB</li>
+                            <li class="mt-4"><span class="font-medium">Business Process Presentation by Director</span> | <span class="text-gray-500">公司董事进行业务流程介绍</span></li>
+                            <ul class="list-none ml-4 space-y-1">
+                                <li>Company Profile | 公司简介</li>
+                                <li>Business Process | 业务流程</li>
+                                <li>Economic Impact | 对中国及地方经济的影响</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex items-start fade-in-on-scroll">
+                    <div class="flex-shrink-0 relative mr-6 md:mr-12">
+                        <div class="flow-line absolute left-1/2 -top-4 bottom-0 transform -translate-x-1/2"></div>
+                        <div class="flow-point -top-4"></div>
+                        <div class="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg z-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.814a4 4 0 00-5.656 0l-4 4a4 4 0 005.656 5.656l1.102-1.101m7.584-1.101a4 4 0 00-5.656 0l-4 4a4 4 0 005.656 5.656l1.102-1.101" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                        <h3 class="text-xl font-semibold mb-2 text-blue-700">
+                            <span class="block">Step 3: Import & Export Start</span>
+                            <span class="block text-base font-normal text-gray-600 mt-1">步骤 3: 开始进出口业务</span>
+                        </h3>
+                        <ul class="list-disc list-inside space-y-2 mt-4 text-gray-700">
+                            <li><span class="font-medium">INSW Functions</span> | <span class="text-gray-500">INSW 功能:</span> Master List, Export/Import Docs, Reports</li>
+                            <li><span class="font-medium">CEISA 4.0 Functions</span> | <span class="text-gray-500">CEISA 4.0 功能:</span> Approvals, Monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tax Facilities Section -->
+        <section class="container mx-auto px-6 sm:px-12 md:px-24 mb-12">
+            <h2 class="text-2xl md:text-4xl font-semibold text-center mb-12 text-gray-800 fade-in-on-scroll">
+                <span class="block">Tax Facilities Section</span>
+                <span class="block text-xl text-gray-500 mt-2">税收优惠政策</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md fade-in-on-scroll">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-700">
+                        <span class="block">Construction Phase</span>
+                        <span class="block text-base font-normal text-gray-600 mt-1">建设阶段</span>
+                    </h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><span class="font-medium">Capital Goods, Machinery, Equipment</span> | <span class="text-gray-500">资本货物、机器、设备</span></li>
+                        <li><span class="font-medium">Import Duty Exempted</span> | <span class="text-gray-500">免征关税</span></li>
+                        <li><span class="font-medium">VAT & Income Tax Not Payable</span> | <span class="text-gray-500">不征收增值税和所得税</span></li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md fade-in-on-scroll">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-700">
+                        <span class="block">Operational Phase</span>
+                        <span class="block text-base font-normal text-gray-600 mt-1">运营阶段</span>
+                    </h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><span class="font-medium">Raw Materials, Machinery, Packaging</span> | <span class="text-gray-500">原材料、机器、包装</span></li>
+                        <li><span class="font-medium">Import Duty Suspended</span> | <span class="text-gray-500">关税暂缓</span></li>
+                        <li><span class="font-medium">VAT & Income Tax Not Collected</span> | <span class="text-gray-500">不征收增值税和所得税</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Tax Exemptions & IT Inventory -->
+        <section class="container mx-auto px-6 sm:px-12 md:px-24 mb-12">
+            <h2 class="text-2xl md:text-4xl font-semibold text-center mb-12 text-gray-800 fade-in-on-scroll">
+                <span class="block">Service Tax Exemptions (PJKEK)</span>
+                <span class="block text-xl text-gray-500 mt-2">服务税收优惠</span>
+            </h2>
+            <div class="bg-white p-8 rounded-lg shadow-md mb-8 fade-in-on-scroll">
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li><span class="font-medium">IT Inventory</span> | <span class="text-gray-500">IT 库存管理</span></li>
+                    <li><span class="font-medium">Construction</span> | <span class="text-gray-500">建设服务</span></li>
+                    <li><span class="font-medium">R&D</span> | <span class="text-gray-500">研发服务</span></li>
+                    <li><span class="font-medium">Tax & Labor Consulting</span> | <span class="text-gray-500">税务与人力资源咨询</span></li>
+                    <li><span class="font-medium">Logistics for Export</span> | <span class="text-gray-500">出口物流服务</span></li>
+                </ul>
+            </div>
+            
+            <h3 class="text-xl md:text-2xl font-semibold text-center mb-4 text-gray-800 fade-in-on-scroll">
+                <span class="block">IT Inventory Obligation</span>
+                <span class="block text-base font-normal text-gray-600 mt-1">IT 库存系统义务</span>
+            </h3>
+            <div class="bg-white p-8 rounded-lg shadow-md fade-in-on-scroll">
+                <p class="mb-4 text-gray-700">
+                    <span class="font-medium">Must apply within 6 months of commercial operation.</span> | <span class="text-gray-500">企业必须在商业运营 6 个月内申请。</span>
+                </p>
+                <p class="font-medium text-gray-700 mb-2">Reports required | 必须生成报告:</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 pl-4">
+                    <li>Inbound/Outbound | 入库/出库</li>
+                    <li>WIP | 在制品</li>
+                    <li>Stock | 库存</li>
+                    <li>Scrap | 废料</li>
+                    <li>Adjustments | 库存调整</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Corporate Income Tax Incentives Section -->
+        <section class="container mx-auto px-6 sm:px-12 md:px-24 mb-12">
+            <h2 class="text-2xl md:text-4xl font-semibold text-center mb-12 text-gray-800 fade-in-on-scroll">
+                <span class="block">Corporate Income Tax Incentives</span>
+                <span class="block text-xl text-gray-500 mt-2">公司所得税优惠政策</span>
+            </h2>
+            <div class="bg-white p-8 rounded-lg shadow-md mb-8 fade-in-on-scroll">
+                <div class="flex flex-col md:flex-row items-center justify-between mb-6">
+                    <img src="https://kek.go.id/_next/static/media/logo-black.d9758dfe.png" alt="KEK Logo" class="h-16 mb-4 md:mb-0 md:mr-8">
+                    <img src="https://object.kek.go.id/ekon-kek-prod-bucket/incentive/income-tax/TNkHWHcEaQkD9yfZY7Fw59p3YS9u4UuZPWchcwam.png?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=F83BDJnBXrZ3WHGbaupe%2F20250923%2Fap-southeast-1%2Fs3%2Faws4_request&X-Amz-Date=20250923T142922Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Signature=d664852ed0487c0b4070fa2386923de146d6236e0ef29ed14c3a4b622bf8f997" alt="Tax Incentives" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <p class="mb-4 text-gray-700">
+                    <span class="font-medium">Investors in SEZ can enjoy Tax Holidays (10–20 years) depending on investment size and alignment with SEZ priority sectors, or Tax Allowance for other industries.</span> | <span class="text-gray-500">在印尼经济特区投资的企业可享受 10–20 年的免税假期，具体取决于投资金额及与特区优先产业的契合度。其他行业则可申请 税收减免。</span>
+                </p>
+                <p class="font-semibold text-gray-800 mb-2">Tax Holiday Breakdown | 免税假期详情:</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li><span class="font-medium">Minimum Invest USD 6.9M (IDR 100B)</span> → <span class="text-blue-600">10 Years</span> | <span class="text-gray-500">最低投资额 690 万美元（1000 亿印尼盾）→ 10 年</span></li>
+                    <li><span class="font-medium">USD 34.5M (IDR 500B)</span> → <span class="text-blue-600">15 Years</span> | <span class="text-gray-500">3450 万美元（5000 亿印尼盾）→ 15 年</span></li>
+                    <li><span class="font-medium">USD 67M (IDR 1T)</span> → <span class="text-blue-600">20 Years</span> | <span class="text-gray-500">6700 万美元（1 万亿印尼盾）→ 20 年</span></li>
+                </ul>
+                <p class="font-semibold text-gray-800 mt-6 mb-2">Tax Allowance | 税收减免:</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li><span class="font-medium">Net Income Reduction</span> | <span class="text-gray-500">净收入减免</span></li>
+                    <li><span class="font-medium">Accelerated Depreciation</span> | <span class="text-gray-500">加速折旧</span></li>
+                    <li><span class="font-medium">Loss Carry Forward</span> | <span class="text-gray-500">亏损结转</span></li>
+                    <li><span class="font-medium">Dividend Tax Relief</span> | <span class="text-gray-500">股息税收优惠</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Import Duty & VAT Exemptions Section -->
+        <section class="container mx-auto px-6 sm:px-12 md:px-24 mb-12">
+            <h2 class="text-2xl md:text-4xl font-semibold text-center mb-12 text-gray-800 fade-in-on-scroll">
+                <span class="block">Import Duty & VAT Exemptions</span>
+                <span class="block text-xl text-gray-500 mt-2">进口关税与增值税优惠</span>
+            </h2>
+            <div class="bg-white p-8 rounded-lg shadow-md fade-in-on-scroll">
+                <p class="mb-4 text-gray-700">
+                    <span class="font-medium">SEZ companies enjoy special facilities for importing capital goods (construction phase) and goods/materials (operational phase).</span> | <span class="text-gray-500">经济特区企业在进口资本货物（建设阶段）和原材料（运营阶段）可享受特殊优惠：</span>
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li><span class="font-medium">Import Duty Exemption</span> | <span class="text-gray-500">进口关税豁免</span></li>
+                    <li><span class="font-medium">VAT Exemption</span> | <span class="text-gray-500">增值税豁免</span></li>
+                    <li><span class="font-medium">Luxury Tax (PPnBM) Exemption</span> | <span class="text-gray-500">奢侈品税豁免</span></li>
+                    <li><span class="font-medium">Income Tax Article 22 Exemption</span> | <span class="text-gray-500">所得税第 22 条豁免</span></li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Tax Holiday Application & Utilization Process -->
+        <section class="container mx-auto px-6 sm:px-12 md:px-24 mb-12" id="tax-holiday-flow">
+            <h2 class="text-2xl md:text-4xl font-semibold text-center mb-4 text-gray-800 fade-in-on-scroll">
+                <span class="block">Tax Holiday Application & Utilization Process</span>
+                <span class="block text-xl text-gray-500 mt-2">税收假期申请与使用流程</span>
+            </h2>
+            <p class="text-lg text-center font-light mb-12 max-w-2xl mx-auto text-gray-700 fade-in-on-scroll">
+                <span class="block">A clear step-by-step guide for investors in Special Economic Zones</span>
+                <span class="block mt-1 text-base">印尼经济特区投资者分步指南</span>
+            </p>
+
+            <!-- Application Process -->
+            <div class="mb-16">
+                <h3 class="text-xl md:text-2xl font-semibold text-blue-700 mb-8 fade-in-on-scroll">
+                    <span class="block">A. Application Process</span>
+                    <span class="block text-base font-normal text-gray-600 mt-1">申请流程</span>
+                </h3>
+                <div class="relative max-w-3xl mx-auto">
+                    <!-- Step 1 -->
+                    <div class="flex items-start mb-12 fade-in-on-scroll">
+                        <div class="flex-shrink-0 relative mr-6 md:mr-12">
+                            <div class="flow-line absolute left-1/2 -top-4 bottom-0 transform -translate-x-1/2"></div>
+                            <div class="flow-point -top-4"></div>
+                            <div class="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                                    <polyline points="10 17 15 12 10 7" />
+                                    <line x1="15" y1="12" x2="3" y2="12" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                            <p class="text-gray-700">
+                                <span class="font-medium">Access OSS (<a href="https://oss.go.id" class="text-blue-500 hover:underline">https://oss.go.id</a>), login with username & password</span> | <span class="text-gray-500">登录 OSS 平台并输入用户名和密码</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="flex items-start mb-12 fade-in-on-scroll">
+                        <div class="flex-shrink-0 relative mr-6 md:mr-12">
+                            <div class="flow-line absolute left-1/2 -top-4 bottom-0 transform -translate-x-1/2"></div>
+                            <div class="flow-point -top-4"></div>
+                            <div class="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="12" y1="12" x2="12" y2="12"></line>
+                                    <line x1="12" y1="12" x2="12" y2="12"></line>
+                                    <line x1="12" y1="8" x2="12" y2="16"></line>
+                                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                            <p class="text-gray-700">
+                                <span class="font-medium">Select Facilities → Tax Holiday in SEZ → Application</span> | <span class="text-gray-500">选择 设施 → 特区税收假期 → 申请</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="flex items-start mb-12 fade-in-on-scroll">
+                        <div class="flex-shrink-0 relative mr-6 md:mr-12">
+                            <div class="flow-line absolute left-1/2 -top-4 bottom-0 transform -translate-x-1/2"></div>
+                            <div class="flow-point -top-4"></div>
+                            <div class="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                            <p class="text-gray-700">
+                                <span class="font-medium">Confirm Business Activity (NIB & Company Data)</span> | <span class="text-gray-500">确认企业数据与营业执照（NIB）</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="flex items-start mb-12 fade-in-on-scroll">
+                        <div class="flex-shrink-0 relative mr-6 md:mr-12">
+                            <div class="flow-line absolute left-1/2 -top-4 bottom-0 transform -translate-x-1/2"></div>
+                            <div class="flow-point -top-4"></div>
+                            <div class="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="12" y1="18" x2="12" y2="18"></line>
+                                    <line x1="12" y1="14" x2="12" y2="14"></line>
+                                    <path d="M12 18V14"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                            <p class="text-gray-700">
+                                <span class="font-medium">Upload required documents & shareholder fiscal certificate</span> | <span class="text-gray-500">上传所需文件与股东税务证明</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="flex items-start mb-12 fade-in-on-scroll">
+                        <div class="flex-shrink-0 relative mr-6 md:mr-12">
+                            <div class="flow-line absolute left-1/2 -top-4 bottom-0 transform -translate-x-1/2"></div>
+                            <div class="flow-point -top-4"></div>
+                            <div class="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-8.56"></path>
+                                    <path d="M22 4L12 14.01l-3-3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                            <p class="text-gray-700">
+                                <span class="font-medium">Complete MSME Commitment Form → Save & Continue</span> | <span class="text-gray-500">填写中小企业承诺表 → 保存并继续</span>
+                            </p>
+                        </div>
+                    </div>
+                     <!-- Step 6 -->
+                    <div class="flex items-start mb-12 fade-in-on-scroll">
+                        <div class="flex-shrink-0 relative mr-6 md:mr-12">
+                            <div class="flow-line absolute left-1/2 -top-4 bottom-0 transform -translate-x-1/2"></div>
+                            <div class="flow-point -top-4"></div>
+                            <div class="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                    <path d="M12 10l0.01 0"></path>
+                                    <path d="M9 14h6"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                            <p class="text-gray-700">
+                                <span class="font-medium">Review & Submit application → BKPM Evaluation</span> | <span class="text-gray-500">审核并提交申请 → 进入印尼投资部/BKPM 审核</span>
+                            </p>
+                        </div>
+                    </div>
+                     <!-- Step 7 -->
+                    <div class="flex items-start mb-12 fade-in-on-scroll">
+                        <div class="flex-shrink-0 relative mr-6 md:mr-12">
+                            <div class="flow-line absolute left-1/2 -top-4 bottom-0 transform -translate-x-1/2"></div>
+                            <div class="flow-point -top-4"></div>
+                            <div class="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                    <path d="M10 20.733l-5.69-5.69a2 2 0 0 1 0-2.828L10 6.525"></path>
+                                    <path d="M20 3a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                            <p class="text-gray-700">
+                                <span class="font-medium">Approval → Receive Decree (KMK)</span> | <span class="text-gray-500">获批后 → 接收正式批准文件（KMK）</span>
+                            </p>
+                            <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-4 mt-4" role="alert">
+                                <p class="font-semibold">Important Note | 重要提示:</p>
+                                <p class="text-sm mt-1">Surat Keputusan (KMK) is the official decree of approval for your tax holiday application.</p>
+                                <p class="text-sm mt-1">《决定书》（KMK）是税务假期申请的正式批准文件。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Utilization Process -->
+            <div>
+                <h3 class="text-xl md:text-2xl font-semibold text-blue-700 mb-8 fade-in-on-scroll">
+                    <span class="block">B. Utilization Process</span>
+                    <span class="block text-base font-normal text-gray-600 mt-1">使用流程</span>
+                </h3>
+                <div class="relative max-w-3xl mx-auto">
+                    <!-- Step 1 -->
+                    <div class="flex items-start mb-12 fade-in-on-scroll">
+                        <div class="flex-shrink-0 relative mr-6 md:mr-12">
+                            <div class="flow-line absolute left-1/2 -top-4 bottom-0 transform -translate-x-1/2"></div>
+                            <div class="flow-point -top-4"></div>
+                            <div class="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                                    <polyline points="10 17 15 12 10 7" />
+                                    <line x1="15" y1="12" x2="3" y2="12" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                            <p class="text-gray-700">
+                                <span class="font-medium">Access OSS → Facilities → Tax Holiday in SEZ → Utilization</span> | <span class="text-gray-500">登录 OSS → 设施 → 特区税收假期 → 使用</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="flex items-start mb-12 fade-in-on-scroll">
+                        <div class="flex-shrink-0 relative mr-6 md:mr-12">
+                            <div class="flow-line absolute left-1/2 -top-4 bottom-0 transform -translate-x-1/2"></div>
+                            <div class="flow-point -top-4"></div>
+                            <div class="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <polyline points="10 9 9 9 8 9"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                            <p class="text-gray-700">
+                                <span class="font-medium">Confirm business activity & company data</span> | <span class="text-gray-500">确认企业数据与经营活动</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="flex items-start mb-12 fade-in-on-scroll">
+                        <div class="flex-shrink-0 relative mr-6 md:mr-12">
+                            <div class="flow-line absolute left-1/2 -top-4 bottom-0 transform -translate-x-1/2"></div>
+                            <div class="flow-point -top-4"></div>
+                            <div class="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="12" y1="18" x2="12" y2="18"></line>
+                                    <line x1="12" y1="14" x2="12" y2="14"></line>
+                                    <path d="M12 18V14"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                            <p class="text-gray-700">
+                                <span class="font-medium">Upload utilization documents</span> | <span class="text-gray-500">上传使用阶段所需文件</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="flex items-start mb-12 fade-in-on-scroll">
+                        <div class="flex-shrink-0 relative mr-6 md:mr-12">
+                            <div class="flow-line absolute left-1/2 -top-4 bottom-0 transform -translate-x-1/2"></div>
+                            <div class="flow-point -top-4"></div>
+                            <div class="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <path d="M21 12H3"></path>
+                                    <path d="M12 21V3"></path>
+                                    <path d="M18 6L18 6"></path>
+                                    <path d="M18 18L18 18"></path>
+                                    <path d="M6 6L6 6"></path>
+                                    <path d="M6 18L6 18"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                            <p class="text-gray-700">
+                                <span class="font-medium">Review & Submit to BKPM</span> | <span class="text-gray-500">审核并提交至投资部</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="flex items-start mb-12 fade-in-on-scroll">
+                        <div class="flex-shrink-0 relative mr-6 md:mr-12">
+                            <div class="flow-line absolute left-1/2 -top-4 bottom-0 transform -translate-x-1/2"></div>
+                            <div class="flow-point -top-4"></div>
+                            <div class="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                            <p class="text-gray-700">
+                                <span class="font-medium">DJP Field Inspection (if required)</span> | <span class="text-gray-500">印尼税务总局进行实地检查（如有需要）</span>
+                            </p>
+                        </div>
+                    </div>
+                     <!-- Step 6 -->
+                    <div class="flex items-start fade-in-on-scroll">
+                        <div class="flex-shrink-0 relative mr-6 md:mr-12">
+                            <div class="flow-line absolute left-1/2 -top-4 bottom-0 transform -translate-x-1/2"></div>
+                            <div class="flow-point -top-4"></div>
+                            <div class="w-12 h-12 flex items-center justify-center bg-blue-500 text-white rounded-full shadow-lg z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                    <path d="M10 20.733l-5.69-5.69a2 2 0 0 1 0-2.828L10 6.525"></path>
+                                    <path d="M20 3a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md w-full">
+                            <p class="text-gray-700">
+                                <span class="font-medium">Approval → Receive Decree (KMK)</span> | <span class="text-gray-500">获批后 → 接收正式批准文件（KMK）</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Recommended Organizational Team Section -->
+        <section class="container mx-auto px-6 sm:px-12 md:px-24 mb-12">
+            <h2 class="text-2xl md:text-4xl font-semibold text-center mb-4 text-gray-800 fade-in-on-scroll">
+                <span class="block">Recommended Organizational Team for Tax Holiday Application</span>
+                <span class="block text-xl text-gray-500 mt-2">建议的税收假期申请团队组织结构</span>
+            </h2>
+            <div class="bg-white p-8 rounded-lg shadow-md mb-8 fade-in-on-scroll">
+                <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-4 mb-8" role="alert">
+                    <p class="font-semibold">Key Success Factor | 成功关键因素:</p>
+                    <p class="text-sm mt-1">A dedicated, qualified team is critical for smooth and successful Tax Holiday approval.</p>
+                    <p class="text-sm mt-1">拥有一支专注且合格的团队，是顺利获得税收假期批准的关键。</p>
+                </div>
+                
+                <div class="text-center mb-12">
+                    <div class="inline-block p-6 rounded-lg shadow-lg bg-blue-700 text-white fade-in-on-scroll">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 mx-auto mb-2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <h3 class="text-lg font-semibold">Project Leader</h3>
+                        <p class="text-sm">Head of Tax Holiday Project</p>
+                        <p class="text-sm text-blue-200 mt-1">项目负责人</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Role 1: Tax & Finance Specialist -->
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md fade-in-on-scroll">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-blue-600 mb-4">
+                            <path d="M12 1v22"></path>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                        <h4 class="text-lg font-semibold mb-2">Tax & Finance Specialist</h4>
+                        <p class="text-sm text-gray-700 mb-2">税务与财务专家</p>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-gray-600">
+                            <li><span class="font-medium">Prepares tax analysis, financial reports, and ensures compliance with incentive requirements.</span> | <span class="text-gray-500">准备税务分析、财务报告，并确保符合优惠政策要求。</span></li>
+                        </ul>
+                    </div>
+                    <!-- Role 2: Legal & Compliance Officer -->
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md fade-in-on-scroll">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-blue-600 mb-4">
+                            <path d="M14 10H2V4h12v6zM2 10l-1 12h14l-1-12M7 16l-1 1" />
+                            <path d="M16 10H22v4h-6zM22 14l-1 8h-6l-1-8M17 18l-1 1" />
+                        </svg>
+                        <h4 class="text-lg font-semibold mb-2">Legal & Compliance Officer</h4>
+                        <p class="text-sm text-gray-700 mb-2">法律与合规专员</p>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-gray-600">
+                            <li><span class="font-medium">Reviews legal documents, ensures compliance with laws, and manages agreements.</span> | <span class="text-gray-500">审核法律文件，确保符合法律规定，管理相关协议。</span></li>
+                        </ul>
+                    </div>
+                    <!-- Role 3: Investment & Business Development Officer -->
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md fade-in-on-scroll">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-blue-600 mb-4">
+                            <path d="M12 20.94a2.91 2.91 0 0 1-1.66-2.91A10.87 10.87 0 0 1 12 14c2.81 0 5.43.91 7.42 2.53a2.91 2.91 0 0 1-1.66 4.41M12 12A6 6 0 0 0 6 6a6 6 0 0 0-6 6"></path>
+                            <path d="M16 12A4 4 0 0 0 12 8a4 4 0 0 0-4 4"></path>
+                            <path d="M12 0a12 12 0 0 1 12 12A12 12 0 0 1 12 24a12 12 0 0 1-12-12A12 12 0 0 1 12 0z"></path>
+                        </svg>
+                        <h4 class="text-lg font-semibold mb-2">Investment & Business Development Officer</h4>
+                        <p class="text-sm text-gray-700 mb-2">投资与业务发展专员</p>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-gray-600">
+                            <li><span class="font-medium">Aligns project with SEZ priority sectors, prepares business plans, and ensures investment thresholds.</span> | <span class="text-gray-500">确保项目符合特区优先产业，准备商业计划，并达到投资门槛。</span></li>
+                        </ul>
+                    </div>
+                    <!-- Role 4: Documentation & OSS Administrator -->
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md fade-in-on-scroll">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-blue-600 mb-4">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <path d="M9 13L15 13"></path>
+                            <path d="M9 17L15 17"></path>
+                            <path d="M10 9L10 9"></path>
+                        </svg>
+                        <h4 class="text-lg font-semibold mb-2">Documentation & OSS Administrator</h4>
+                        <p class="text-sm text-gray-700 mb-2">文件与 OSS 管理员</p>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-gray-600">
+                            <li><span class="font-medium">Uploads required documents, maintains OSS system submissions, and monitors application status.</span> | <span class="text-gray-500">负责上传所需文件，维护 OSS 系统提交，并监控申请状态。</span></li>
+                        </ul>
+                    </div>
+                    <!-- Role 5: External Auditor / Consultant -->
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-md fade-in-on-scroll">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-blue-600 mb-4">
+                            <path d="M11 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v2"></path>
+                            <path d="M18 11L18 19L11 22L11 14L18 11Z"></path>
+                            <path d="M11 14L4 17L4 9L11 6L11 14Z"></path>
+                            <path d="M18 11L11 14"></path>
+                        </svg>
+                        <h4 class="text-lg font-semibold mb-2">External Auditor / Consultant</h4>
+                        <p class="text-sm text-gray-700 mb-2">外部审计师/顾问</p>
+                        <ul class="list-disc list-inside space-y-1 text-sm text-gray-600">
+                            <li><span class="font-medium">Provides independent validation of documents and supports during BKPM/DJP inspections.</span> | <span class="text-gray-500">提供独立文件验证，并在 BKPM/DJP 检查期间给予支持。</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Call to Action Section -->
+        <section class="container mx-auto px-6 sm:px-12 md:px-24 text-center space-y-4 mb-12">
+            <a href="https://oss.go.id" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 fade-in-on-scroll">
+                <span class="mr-2">Start Your Application</span> | <span>开始申请</span>
+            </a>
+            <a href="https://kek.go.id/id/investment/incentive" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 fade-in-on-scroll">
+                <span class="mr-2">Explore More Incentives</span> | <span>查看更多优惠</span>
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-6 sm:px-12 md:px-24 rounded-t-[4rem] md:rounded-t-[8rem]">
+        <div class="container mx-auto text-center">
+            <div class="text-lg md:text-xl font-semibold mb-4">
+                <p>Need Assistance? <a href="#" class="text-blue-400 hover:underline">Contact Us</a></p>
+                <p class="mt-1 text-base">需要协助吗？ <a href="#" class="text-blue-400 hover:underline">联系我们</a></p>
+            </div>
+            <div class="text-sm text-gray-400 mb-2">
+                <p>Made by: Dodi Hariyanto : Email dodihariyanto580@gmail.com</p>
+                <p class="mt-1">制作人: Dodi Hariyanto : 电子邮件 dodihariyanto580@gmail.com</p>
+            </div>
+            <p class="text-sm text-gray-400">
+                <span class="block">Disclaimer: This page is for informational purposes only, based on official customs regulations.</span>
+                <span class="block mt-1">本页面仅供参考，内容基于官方海关规定。</span>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.2
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-on-scroll').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
